@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Diabetes Prediction</h2>
+            <form action="{{ url_for('predict') }}" method="post">
+                <div class="input-group">
+                    <label for="Pregnancies">Pregnancies:</label>
+                    <input type="text" id="Pregnancies" name="Pregnancies" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="Glucose">Glucose:</label>
+                    <input type="text" id="Glucose" name="Glucose" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="BloodPressure">Blood Pressure:</label>
+                    <input type="text" id="BloodPressure" name="BloodPressure" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="SkinThickness">Skin Thickness:</label>
+                    <input type="text" id="SkinThickness" name="SkinThickness" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="Insulin">Insulin:</label>
+                    <input type="text" id="Insulin" name="Insulin" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="BMI">BMI:</label>
+                    <input type="text" id="BMI" name="BMI" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+                    <input type="text" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="Age">Age:</label>
+                    <input type="text" id="Age" name="Age" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="submit" value="Predict">
+                </div>
+            </form>
+            {% if prediction_text %}
+                <div class="result">
+                    <h3>{{ prediction_text }}</h3>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

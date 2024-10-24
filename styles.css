@@ -1,0 +1,49 @@
+/* Set background image and styles */
+body {
+    background-image: url("bg1.png");
+    background-color: #cccccc;
+   }
+
+/* Center the content on the page */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Style for the landing page content */
+.landing-page h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.landing-page p {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Button styling */
+.btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Ensure the form and button are displayed properly */
+form {
+    display: inline-block;
+}
